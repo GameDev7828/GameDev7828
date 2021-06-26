@@ -12,6 +12,8 @@ public class DOTweenMove : MonoBehaviour
 
     private Vector2 _currentPosition;
 
+    [SerializeField] private float _duration = 2f;
+
     private void Start()
     {
         _startPosition = transform.position;
@@ -21,7 +23,7 @@ public class DOTweenMove : MonoBehaviour
 
     private void MoveGO(Vector2 pos)
     {
-        transform.DOMove(pos, 2f).OnComplete(() => MoveGO(_currentPosition));
+        transform.DOMove(pos, _duration).OnComplete(() => MoveGO(_currentPosition));
         _currentPosition = _currentPosition == _finalPosition ? _startPosition : _finalPosition;
     }
 }
