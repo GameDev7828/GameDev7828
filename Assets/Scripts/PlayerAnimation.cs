@@ -14,4 +14,9 @@ public class PlayerAnimation : MonoBehaviour
     {
         _animator.SetBool("IsRunning", false);
     }
+
+    public void HurtAnimation()
+    {
+        _animator.SetTrigger("IsHurt");
+    }
 }
