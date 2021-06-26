@@ -12,6 +12,7 @@ public class HealthSlider : MonoBehaviour
     [SerializeField] private Health _health;
     
     [SerializeField] private UnityEvent _playerDead;
+    public UnityEvent PlayerDead => _playerDead;
 
     private void Start()
     {
